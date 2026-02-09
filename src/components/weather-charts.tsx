@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import {
   LineChart,
   Line,
@@ -112,17 +112,12 @@ function CustomTooltip({
   );
 }
 
+// Muted axis color that works on both dark and light backgrounds
+const AXIS_COLOR = "#a1a1aa";
+
 export function WeatherCharts({ readings }: WeatherChartsProps) {
   const [range, setRange] = useState<DateRange>("7d");
-  const [axisColor, setAxisColor] = useState("#a1a1aa");
-
-  // Resolve the CSS variable to an actual color value for SVG
-  useEffect(() => {
-    const computed = getComputedStyle(document.documentElement)
-      .getPropertyValue("--muted-foreground")
-      .trim();
-    if (computed) setAxisColor(computed);
-  }, []);
+  const axisColor = AXIS_COLOR;
 
   const filteredData = useMemo(() => {
     const filtered = filterReadings(readings, range);
