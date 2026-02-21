@@ -175,8 +175,7 @@ export function WeatherCharts({ readings }: WeatherChartsProps) {
           </CardTitle>
         </CardHeader>
         <CardContent className="px-2 sm:px-4 pb-4">
-          <div className="h-[280px] sm:h-[320px]">
-            <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={300}>
               <LineChart data={chartData}>
                 <CartesianGrid
                   strokeDasharray="3 3"
@@ -213,7 +212,6 @@ export function WeatherCharts({ readings }: WeatherChartsProps) {
                 />
               </LineChart>
             </ResponsiveContainer>
-          </div>
         </CardContent>
       </Card>
 
@@ -226,8 +224,7 @@ export function WeatherCharts({ readings }: WeatherChartsProps) {
           </CardTitle>
         </CardHeader>
         <CardContent className="px-2 sm:px-4 pb-4">
-          <div className="h-[280px] sm:h-[320px]">
-            <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={300}>
               <LineChart data={chartData}>
                 <CartesianGrid
                   strokeDasharray="3 3"
@@ -264,7 +261,6 @@ export function WeatherCharts({ readings }: WeatherChartsProps) {
                 />
               </LineChart>
             </ResponsiveContainer>
-          </div>
         </CardContent>
       </Card>
 
@@ -276,8 +272,7 @@ export function WeatherCharts({ readings }: WeatherChartsProps) {
           </CardTitle>
         </CardHeader>
         <CardContent className="px-2 sm:px-4 pb-4">
-          <div className="h-[280px] sm:h-[320px]">
-            <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={300}>
               <LineChart data={chartData}>
                 <CartesianGrid
                   strokeDasharray="3 3"
@@ -348,7 +343,6 @@ export function WeatherCharts({ readings }: WeatherChartsProps) {
                 />
               </LineChart>
             </ResponsiveContainer>
-          </div>
         </CardContent>
       </Card>
     </div>
